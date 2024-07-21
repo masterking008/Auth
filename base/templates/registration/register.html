@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="body">
+<div class="form card register">
+    <h3>Register</h3>
+<form method="POST">
+{% csrf_token %}
+
+{{form}}
+<button type="submit" class="btn btn-success">Register</button>
+</form>
+<a href="{% url "base:login" %}">LOGIN</a>
+</div>
+</div>
+{% endblock content %}

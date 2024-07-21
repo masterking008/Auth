@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="homepage">
+    <nav class="navbar bg-primary navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">Dinesh Sahu</a>
+        
+            <form method="post" action="{% url 'base:logout' %}">
+                {% csrf_token %}
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                      <a class="nav-link" href="#">Profile</a>
+                    </li>
+                    <ul>
+                <button  class="btn btn-outline-danger" type="submit">logout</button>
+            </form>
+          </div>
+        </div>
+      </nav>
+      <main>
+        <h1 class="text-center">Hello World!! </h1>
+      </main>
+      <div class="container">
+        <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
+          <div class="col-md-4 d-flex align-items-center">
+            <span class="mb-3 mb-md-0 text-body-secondary">© 2024 Made by Dinesh</span>
+          </div>
+        </footer>
+      </div>
+
+</div>
+{% endblock content %}
